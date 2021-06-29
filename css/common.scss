@@ -1,0 +1,87 @@
+@charset "utf-8";
+@import "_var", "_mixin", "_function";
+
+// font
+@font-face {
+  font-family: AmaticSC;
+  font-style: normal;
+  font-weight: 400;
+  src: local("Amatic SC"),
+       url("../font/AmaticSC-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: AmaticSC;
+  font-style: normal;
+  font-weight: 700;
+  src: local("Amatic SC"),
+       url("../font/AmaticSC-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: ComicNeue;
+  font-style: normal;
+  font-weight: 400;
+  src: local("Comic Neue"),
+       url("../font/ComicNeue-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: ComicNeue;
+  font-style: normal;
+  font-weight: 700;
+  src: local("Comic Neue"),
+       url("../font/ComicNeue-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: Spoqa;
+  font-style: normal;
+  font-weight: 400;
+  src: local("Spoqa Han Sans Neo Regular"),
+       url("../font/SpoqaHanSansNeo-Regular.otf") format("opentype");
+}
+@font-face {
+  font-family: Spoqa;
+  font-style: normal;
+  font-weight: 700;
+  src: local("Spoqa Han Sans Neo Bold"),
+       url("../font/SpoqaHanSansNeo-Bold.otf") format("opentype");
+}
+
+// tag reset
+body, h1, h2, h3, h4, h5, h6, ul, p, button{padding: 0; margin: 0;}
+ul{list-style: none;}
+img{vertical-align: top; border: none;}
+img, video{max-width: 100%;}
+button{border: none; background: none; font-family: inherit; color: inherit; font-size: inherit; cursor: pointer;}
+a:link, a:visited, a:hover, a:active{text-decoration: none; color: inherit;}
+address{font-style: normal;}
+header, nav, section, article, address, footer{display: block;}
+
+// common class
+.p_r{position: relative;}
+.p_a{position: absolute;}
+.f_l{float: left;}
+.f_r{float: right;}
+.clearfix::after{content: ""; clear: both; display: block;}
+.blind{width: 1px; height: 1px; position: absolute; overflow: hidden; border: none; clip: rect(1px, 1px, 1px, 1px); clip-path: inset(50%);}
+.max1440{width: 100%; max-width: 1440px; margin: 0 auto;}
+.hidden{visibility: hidden;}
+.visible{visibility: visible;}
+.beige{background: $beige; border-bottom: 1px solid $beige2;}
+.btn_more{
+  font-size: 1.2vw; background: url("../images/icon/btn_red.png")no-repeat 50% / cover; width: 7.14vw; height: 2.85vw; font-family: ComicNeue;
+}
+.btn_more_bk{
+  @include transition(all 0.5s);
+  font-size: 1.2vw; background: url("../images/icon/btn_bk.png")no-repeat 50% / cover; width: 7.14vw; height: 2.85vw; font-family: ComicNeue;
+}
+
+
+body{
+  font-family: Spoqa, AmaticSC, ComicNeue; font-size: 16px; color: #373737;line-height: 1; font-weight: 400; word-break: keep-all; background: #fdf6ee;
+  *{box-sizing: border-box;}
+}
+
+// skip navigation
+#skip a{
+  position: absolute; top: 0; left: -9999px; z-index: 1000;
+  &:focus{left: 0; width: 100%; height: 50px; line-height: 50px; color: #fdf6ee; background: $bk; text-align: center; font-size: 25px;}
+}

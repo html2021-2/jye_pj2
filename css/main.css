@@ -1,0 +1,441 @@
+#cnt1 {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+  height: 100vh;
+  background: #FFF1F1; }
+  #cnt1 .move_box_wrap {
+    overflow: hidden;
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    margin-top: 5%; }
+  #cnt1 .move_box {
+    width: 550px;
+    height: 550px;
+    border-radius: 50%; }
+    #cnt1 .move_box .photo {
+      -webkit-transition: transform 0.5s ease;
+      transition: transform 0.5s ease;
+      width: 958px;
+      height: 1080px; }
+  #cnt1 .move_box:hover .photo {
+    transform: scale(1.03); }
+  #cnt1 .photo img {
+    -webkit-transition: transform 0.5s ease;
+    transition: transform 0.5s ease;
+    position: absolute;
+    top: -10%;
+    left: -15%;
+    width: 100%;
+    text-align: center;
+    vertical-align: middle; }
+  #cnt1 .txt {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    transform: translateY(-50%);
+    width: 100%;
+    top: 60%;
+    left: 0;
+    padding: 0 15.3vw 0 13.4vw; }
+    #cnt1 .txt h2 {
+      font-family: ComicNeue;
+      font-weight: 700;
+      font-size: 6.25vw;
+      color: #e23e3d;
+      margin-bottom: 1vw; }
+    #cnt1 .txt p {
+      font-size: 1.1vw;
+      line-height: 2vw;
+      letter-spacing: -0.05vw; }
+    #cnt1 .txt .txt2 {
+      text-align: right; }
+  #cnt1 .scrollDown {
+    position: absolute;
+    top: 93%;
+    left: 3%;
+    font-family: AmaticSC;
+    font-size: 1.7vw; }
+
+#cnt2 {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  height: 100vh; }
+  #cnt2 h2 {
+    background: url("../images/main/cnt2_bg.jpg") no-repeat 50%/cover;
+    width: 25vw;
+    height: 31vw;
+    /*  width: 573px; height: 678px;*/
+    max-width: 100%;
+    border-radius: 45%;
+    margin-right: 5vw; }
+    #cnt2 h2 span {
+      top: 8vw;
+      right: 0vw;
+      font-family: AmaticSC;
+      font-size: 6vw;
+      margin-right: -3vw; }
+  #cnt2 .swiper-wrapper {
+    -webkit-align-items: flex-end;
+    align-items: flex-end;
+    width: 65vw; }
+    #cnt2 .swiper-wrapper .swiper-slide .slide .winePhoto::before {
+      -webkit-transition: opacity, 0.4s;
+      transition: opacity, 0.4s;
+      content: "";
+      display: block;
+      position: absolute;
+      top: 5vw;
+      left: -2vw;
+      background: no-repeat top left / cover;
+      z-index: 1;
+      opacity: 0;
+      width: 5.5vw;
+      height: 5.2vw; }
+    #cnt2 .swiper-wrapper .swiper-slide .slide .winePhoto::after {
+      -webkit-transition: opacity, 0.4s;
+      transition: opacity, 0.4s;
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: 0;
+      right: -6vw;
+      background: no-repeat top left / cover;
+      z-index: -1;
+      opacity: 0;
+      width: 10vw;
+      height: 10vw; }
+    #cnt2 .swiper-wrapper #slide1 .slide .winePhoto::before {
+      background-image: url("../images/fruit/lime1.png"); }
+    #cnt2 .swiper-wrapper #slide1 .slide .winePhoto::after {
+      background-image: url("../images/fruit/lime2.png"); }
+    #cnt2 .swiper-wrapper #slide2 .slide .winePhoto::before {
+      background-image: url("../images/fruit/blueberry1.png"); }
+    #cnt2 .swiper-wrapper #slide2 .slide .winePhoto::after {
+      background-image: url("../images/fruit/blueberry2.png");
+      width: 8vw;
+      height: 8vw; }
+    #cnt2 .swiper-wrapper #slide3 .slide .winePhoto::before {
+      background-image: url("../images/fruit/shiitake2.png");
+      width: 8vw;
+      height: 8vw; }
+    #cnt2 .swiper-wrapper #slide3 .slide .winePhoto::after {
+      background-image: url("../images/fruit/shiitake3.png");
+      width: 8vw;
+      height: 7vw;
+      right: -5vw; }
+    #cnt2 .swiper-wrapper #slide4 .slide .winePhoto::before {
+      background-image: url("../images/fruit/pear1.png");
+      width: 7vw;
+      height: 9vw; }
+    #cnt2 .swiper-wrapper #slide4 .slide .winePhoto::after {
+      background-image: url("../images/fruit/pear2.png"); }
+    #cnt2 .swiper-wrapper #slide5 .slide .winePhoto::before {
+      background-image: url("../images/fruit/cherry2.png");
+      width: 8vw;
+      height: 8vw; }
+    #cnt2 .swiper-wrapper #slide5 .slide .winePhoto::after {
+      background-image: url("../images/fruit/cherry.png"); }
+    #cnt2 .swiper-wrapper #slide6 .slide .winePhoto::before {
+      background-image: url("../images/fruit/apple.png");
+      width: 6vw;
+      height: 6vw; }
+    #cnt2 .swiper-wrapper #slide6 .slide .winePhoto::after {
+      background-image: url("../images/fruit/apple1.png"); }
+    #cnt2 .swiper-wrapper #slide7 .slide .winePhoto::before {
+      background-image: url("../images/fruit/chocolate2.png");
+      width: 6.5vw;
+      height: 6vw; }
+    #cnt2 .swiper-wrapper #slide7 .slide .winePhoto::after {
+      background-image: url("../images/fruit/chocolate.png");
+      width: 10vw;
+      height: 7.5vw;
+      right: -5vw; }
+    #cnt2 .swiper-wrapper .swiper-slide .slide {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      flex-direction: column;
+      -webkit-flex-direction: column;
+      -webkit-align-items: center;
+      align-items: center;
+      -webkit-justify-content: flex-end;
+      justify-content: flex-end;
+      font-family: ComicNeue;
+      height: 36vw; }
+      #cnt2 .swiper-wrapper .swiper-slide .slide .winePhoto {
+        position: relative;
+        display: block;
+        text-align: center;
+        width: 8.5vw; }
+      #cnt2 .swiper-wrapper .swiper-slide .slide .winePhoto img {
+        -webkit-transition: width, 0.4s;
+        transition: width, 0.4s;
+        width: 6vw; }
+      #cnt2 .swiper-wrapper .swiper-slide .slide strong {
+        display: block;
+        text-align: center;
+        font-size: 1.5vw;
+        margin: 1vw 0; }
+    #cnt2 .swiper-wrapper .swiper-slide .slide:hover .winePhoto img, #cnt2 .swiper-wrapper .swiper-slide .slide:focus .winePhoto img {
+      width: 8.5vw; }
+    #cnt2 .swiper-wrapper .swiper-slide .slide:hover .winePhoto::before, #cnt2 .swiper-wrapper .swiper-slide .slide:hover .winePhoto::after, #cnt2 .swiper-wrapper .swiper-slide .slide:focus .winePhoto::before, #cnt2 .swiper-wrapper .swiper-slide .slide:focus .winePhoto::after {
+      opacity: 1; }
+    #cnt2 .swiper-wrapper .swiper-slide .slide:hover .btn_more, #cnt2 .swiper-wrapper .swiper-slide .slide:focus .btn_more {
+      background: url("../images/icon/btn_red_on.png") no-repeat 50%/cover;
+      color: #fff; }
+  #cnt2 .swiper-button-prev, #cnt2 .swiper-button-next {
+    margin-top: 0;
+    width: 5vw;
+    height: 4.8vw;
+    background: no-repeat 50% / cover; }
+    #cnt2 .swiper-button-prev::after, #cnt2 .swiper-button-next::after {
+      display: none; }
+  #cnt2 .swiper-button-prev {
+    background-image: url("../images/icon/slide_left.png");
+    left: 0; }
+  #cnt2 .swiper-button-next {
+    background-image: url("../images/icon/slide_right.png");
+    right: 0; }
+
+#cnt3 {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  align-items: center;
+  height: 100vh; }
+  #cnt3 .left_txt {
+    text-align: center; }
+    #cnt3 .left_txt h2 {
+      font-size: 5vw;
+      font-family: AmaticSC;
+      padding: 2vw 0; }
+    #cnt3 .left_txt article {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      flex-wrap: wrap;
+      -webkit-flex-wrap: wrap;
+      -webkit-justify-content: space-between;
+      justify-content: space-between;
+      -webkit-align-items: center;
+      align-items: center;
+      position: relative;
+      margin: 0 10vw;
+      display: table; }
+      #cnt3 .left_txt article::before {
+        -webkit-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        transform: translateY(-50%);
+        content: "";
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 90%;
+        height: 1px;
+        background: rgba(37, 37, 37, 0.3);
+        margin-left: -45%; }
+      #cnt3 .left_txt article::after {
+        -webkit-transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        transform: translateX(-50%);
+        -webkit-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        transform: translateY(-50%);
+        content: "";
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 1px;
+        height: 80%;
+        background: rgba(37, 37, 37, 0.3); }
+      #cnt3 .left_txt article #hoverLine {
+        position: absolute;
+        top: -10px;
+        left: 50%;
+        margin-left: -40px;
+        pointer-events: none; }
+        #cnt3 .left_txt article #hoverLine #line2 {
+          fill: none;
+          stroke: #e23e3d;
+          stroke-linecap: round;
+          stroke-width: 5;
+          stroke-dasharray: 897;
+          stroke-dashoffset: 897;
+          animation: linehover 0.5s linear forwards; }
+@keyframes lineHover {
+  0% {
+    stroke-dashoffset: 897; }
+  100% {
+    stroke-dashoffset: 0; } }
+    #cnt3 .left_txt .atc_txt {
+      position: relative;
+      padding: 2vw 2vw;
+      padding-left: 3vw;
+      display: table-cell; }
+      #cnt3 .left_txt .atc_txt .num {
+        -webkit-transition: color 0.3s;
+        transition: color 0.3s;
+        position: absolute;
+        top: 0;
+        left: -3vw;
+        font-family: AmaticSC;
+        font-weight: 700;
+        font-size: 4vw; }
+      #cnt3 .left_txt .atc_txt strong {
+        -webkit-transition: color 0.3s;
+        transition: color 0.3s;
+        font-family: ComicNeue;
+        font-size: 1.7vw; }
+      #cnt3 .left_txt .atc_txt .txt {
+        font-size: 0.8vw;
+        line-height: 1.5;
+        padding: 1vw 0 0.5vw; }
+    #cnt3 .left_txt .atc_txt:hover .num, #cnt3 .left_txt .atc_txt:hover strong, #cnt3 .left_txt .atc_txt:focus .num, #cnt3 .left_txt .atc_txt:focus strong {
+      color: #e23e3d; }
+    #cnt3 .left_txt .atc_txt:hover .btn_more_bk, #cnt3 .left_txt .atc_txt:focus .btn_more_bk {
+      background-image: url("../images/icon/btn_red_on.png");
+      color: #fff; }
+  #cnt3 #video {
+    height: 85vh;
+    width: 40vw;
+    margin-right: 10vw;
+    vertical-align: middle; }
+
+#cnt4 {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+  margin: 0 10vw; }
+  #cnt4 .txt_box h2 {
+    font-family: AmaticSC;
+    font-size: 5vw; }
+  #cnt4 .txt_box p {
+    font-size: 0.9vw;
+    line-height: 1.6;
+    padding: 1.5vw 0.5vw 3vw; }
+  #cnt4 .txt_box .btn_more_bk {
+    position: relative;
+    display: block;
+    font-size: 1vw;
+    text-align: center;
+    line-height: 55px;
+    font-weight: 700;
+    margin-left: 18vw; }
+  #cnt4 .txt_box .finger {
+    position: absolute;
+    top: 100%;
+    left: 100%;
+    display: block;
+    /* background: url("../images/icon/icon_finger.png") no-repeat center / cover; */
+    width: 3vw;
+    height: 3vw; }
+  #cnt4 .photo_box {
+    position: relative;
+    width: 50%;
+    height: 100%; }
+    #cnt4 .photo_box .box {
+      position: absolute;
+      top: 50%;
+      margin-top: -19vw;
+      left: 50%;
+      margin-left: 22.5vw;
+      width: 25vw;
+      height: 38vw;
+      background: no-repeat 50% / cover; }
+      #cnt4 .photo_box .box h3 {
+        padding-top: 2vw;
+        padding-left: 1vw;
+        font-size: 1.5vw; }
+      #cnt4 .photo_box .box p {
+        padding-top: 1vw;
+        padding-left: 1.2vw;
+        font-size: 0.9vw;
+        line-height: 1.3; }
+      #cnt4 .photo_box .box.box1 {
+        background-image: url("../images/main/cnt5_photo1.jpg");
+        margin-left: -12.5vw; }
+      #cnt4 .photo_box .box.box2 {
+        -webkit-transform: rotate(7deg);
+        -moz-transform: rotate(7deg);
+        transform: rotate(7deg);
+        background-image: url("../images/main/cnt5_photo2.jpg"); }
+      #cnt4 .photo_box .box.box3 {
+        -webkit-transform: rotate(-7deg);
+        -moz-transform: rotate(-7deg);
+        transform: rotate(-7deg);
+        background-image: url("../images/main/cnt5_photo3.jpg"); }
+      #cnt4 .photo_box .box.box4 {
+        -webkit-transform: rotate(5deg);
+        -moz-transform: rotate(5deg);
+        transform: rotate(5deg);
+        background-image: url("../images/main/cnt5_photo4.jpg"); }
+    #cnt4 .photo_box .controller {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-justify-content: space-between;
+      justify-content: space-between;
+      -webkit-align-items: center;
+      align-items: center;
+      background: no-repeat 50% / cover;
+      width: 100%;
+      height: 70px;
+      z-index: 10; }
+      #cnt4 .photo_box .controller .button-prev {
+        background-image: url("../images/icon/slide_left_small.png");
+        width: 72px;
+        height: 70px;
+        position: absolute;
+        bottom: 5vw;
+        left: 0; }
+      #cnt4 .photo_box .controller .button-next {
+        background-image: url("../images/icon/slide_right_small.png");
+        width: 72px;
+        height: 70px;
+        position: absolute;
+        bottom: 5vw;
+        right: 0; }
+
+/*# sourceMappingURL=main.css.map */

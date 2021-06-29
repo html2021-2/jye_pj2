@@ -1,0 +1,227 @@
+@charset "utf-8";
+@import "_var", "_mixin", "_function";
+
+// body{overflow-X: hidden;}  // 가로 스크롤바 제거
+#cnt1{
+  @include flex;
+  @include justify-content;
+  @include align-items;
+  height: 100vh; background: $lightPink;
+  .move_box_wrap{
+    overflow: hidden; width: 600px; height: 600px; border-radius: 50%; margin-top: 5%;
+  }
+  .move_box{
+    width: 550px; height: 550px; border-radius: 50%;
+    .photo{
+      @include transition(transform 0.5s ease);
+      width: 958px; height: 1080px;
+    }
+  }
+  .move_box:hover .photo{transform: scale(1.03);}
+  .photo img{
+    @include transition(transform 0.5s ease);
+    position: absolute; top: -10%; left: -15%; width: 100%; text-align: center; vertical-align: middle;
+  }
+  .txt{
+    @include flex;
+    @include justify-content(space-between);
+    @include align-items;
+    @include translateY-50;
+    width: 100%; top: 60%; left: 0; padding: 0 15.3vw 0 13.4vw;
+    h2{font-family: ComicNeue; font-weight: 700; font-size: 6.25vw; color: $red; margin-bottom: 1vw;}
+    p{font-size: 1.1vw; line-height: 2vw; letter-spacing: -0.05vw;}
+    .txt2{text-align: right;}
+  }
+  .scrollDown{
+    position: absolute; top: 93%; left: 3%; font-family: AmaticSC; font-size: 1.7vw;
+  }
+}
+
+#cnt2{
+  @include flex;
+  @include align-items;
+  height: 100vh;
+  h2{
+    background: url("../images/main/cnt2_bg.jpg") no-repeat 50% / cover;  width: 25vw; height: 31vw; /*  width: 573px; height: 678px;*/ max-width: 100%; border-radius: 45%; margin-right: 5vw;
+    span{top: 8vw; right: 0vw; font-family: AmaticSC; font-size: 6vw; margin-right: -3vw;}
+  }
+  .swiper-wrapper{
+    @include align-items(flex-end);
+    width: 65vw;
+    .swiper-slide .slide .winePhoto{
+      &::before{
+        @include transition(opacity, 0.4s);
+        content:""; display: block; position: absolute; top: 5vw; left: -2vw; background: no-repeat top left / cover; z-index: 1;opacity: 0; width: 5.5vw; height: 5.2vw;}
+      &::after{
+        @include transition(opacity, 0.4s);
+        content:""; display: block; position: absolute; bottom: 0; right: -6vw; background: no-repeat top left / cover; z-index: -1;opacity: 0; width: 10vw; height: 10vw;}
+    }
+    #slide1 .slide .winePhoto{
+      &::before{
+       background-image: url("../images/fruit/lime1.png");}
+      &::after{
+        background-image: url("../images/fruit/lime2.png");}
+    }
+    #slide2 .slide .winePhoto{
+      &::before{
+       background-image: url("../images/fruit/blueberry1.png");}
+      &::after{
+        background-image: url("../images/fruit/blueberry2.png");width: 8vw; height: 8vw;}
+    }
+    #slide3 .slide .winePhoto{
+      &::before{
+       background-image: url("../images/fruit/shiitake2.png"); width: 8vw; height: 8vw;}
+      &::after{
+        background-image: url("../images/fruit/shiitake3.png");width: 8vw; height: 7vw; right: -5vw;}
+    }
+    #slide4 .slide .winePhoto{
+      &::before{
+       background-image: url("../images/fruit/pear1.png"); width: 7vw; height: 9vw;}
+      &::after{
+        background-image: url("../images/fruit/pear2.png");}
+    }
+    #slide5 .slide .winePhoto{
+      &::before{
+       background-image: url("../images/fruit/cherry2.png"); width: 8vw; height: 8vw;}
+      &::after{
+        background-image: url("../images/fruit/cherry.png");}
+    }
+    #slide6 .slide .winePhoto{
+      &::before{
+       background-image: url("../images/fruit/apple.png"); width: 6vw; height: 6vw;}
+      &::after{
+        background-image: url("../images/fruit/apple1.png");}
+    }
+    #slide7 .slide .winePhoto{
+      &::before{
+       background-image: url("../images/fruit/chocolate2.png"); width: 6.5vw; height: 6vw;}
+      &::after{
+        background-image: url("../images/fruit/chocolate.png");width: 10vw; height: 7.5vw; right: -5vw;}
+    }
+    .swiper-slide{
+      .slide{
+        @include flex;
+        @include flex-direction;
+        @include align-items;
+        @include justify-content(flex-end);
+        font-family: ComicNeue; height: 36vw;
+        .winePhoto{
+          position: relative; display: block; text-align: center; width: 8.5vw;
+        }
+        .winePhoto img{
+          @include transition(width, 0.4s);
+          width: 6vw;
+        }
+        strong{display: block; text-align: center;  font-size: 1.5vw; margin: 1vw 0;}
+      }
+      .slide:hover, .slide:focus{
+        .winePhoto img{width: 8.5vw;}
+        .winePhoto::before, .winePhoto::after{opacity: 1;}
+        .btn_more{background: url("../images/icon/btn_red_on.png") no-repeat 50% / cover; color: #fff;}
+      }
+    }
+  }
+  .swiper-button-prev, .swiper-button-next{
+    margin-top: 0; width: 5vw; height: 4.8vw; background: no-repeat 50% / cover;
+    &::after{display: none;}
+  }
+  .swiper-button-prev{background-image: url("../images/icon/slide_left.png"); left: 0;}
+  .swiper-button-next{background-image: url("../images/icon/slide_right.png"); right: 0;}
+}
+
+#cnt3{
+  @include flex;
+  @include justify-content(space-between);
+  @include align-items;
+  height: 100vh;
+  .left_txt{
+    text-align: center;
+    h2{
+      font-size: 5vw; font-family: AmaticSC; padding: 2vw 0;
+    }
+    article{
+      @include flex;
+      @include flex-wrap;
+      @include justify-content(space-between);
+      @include align-items;
+      position: relative; margin: 0 10vw; display: table;
+      &::before{
+        @include translateY-50;
+        content: ""; display: block; position: absolute; top: 50%; left: 50%; width: 90%; height: 1px; background: rgba(37,37,37,.3); margin-left: -45%;
+      }
+      &::after{
+        @include translateX-50;
+        @include translateY-50;
+        content: ""; display: block; position: absolute; top: 50%; left: 50%; width: 1px;height: 80%; background: rgba(37,37,37,.3);
+      }
+      #hoverLine{
+        position: absolute;top: -10px;left: 50%; margin-left: -40px; pointer-events: none;
+        #line2{fill: none; stroke: #e23e3d; stroke-linecap: round; stroke-width: 5; stroke-dasharray: 897; stroke-dashoffset: 897; animation: linehover 0.5s linear forwards;}
+
+      }
+      @keyframes lineHover {
+        0%{stroke-dashoffset: 897;}
+        100%{stroke-dashoffset: 0;}
+      }
+    }
+    .atc_txt{
+      position: relative; padding: 2vw 2vw; padding-left: 3vw; display: table-cell;
+      .num{
+        @include transition(color 0.3s);
+        position: absolute; top: 0; left: -3vw; font-family: AmaticSC; font-weight: 700; font-size: 4vw;}
+      strong{
+        @include transition(color 0.3s);
+        font-family: ComicNeue; font-size: 1.7vw;}
+      .txt{font-size: 0.8vw; line-height: 1.5; padding: 1vw 0 0.5vw;}
+    }
+    .atc_txt:hover, .atc_txt:focus{
+      .num, strong{color: $red;}
+      .btn_more_bk{background-image: url("../images/icon/btn_red_on.png"); color: #fff;}
+    }
+  }
+  
+  #video{height: 85vh; width: 40vw; margin-right: 10vw; vertical-align: middle;}
+}
+
+#cnt4{
+  @include flex;
+  @include justify-content(space-between);
+  @include align-items;
+  height: 100vh; position: relative; margin: 0 10vw;
+  .txt_box{
+    h2{font-family: AmaticSC; font-size: 5vw;}
+    p{font-size: 0.9vw; line-height: 1.6; padding: 1.5vw 0.5vw 3vw;}
+    .btn_more_bk{
+      position: relative; display: block; font-size: 1vw; text-align: center; line-height: 55px; font-weight: 700; margin-left: 18vw;
+    }
+    .finger{position: absolute; top: 100%; left: 100%; display: block; /* background: url("../images/icon/icon_finger.png") no-repeat center / cover; */ width: 3vw; height: 3vw;}
+  }
+  .photo_box{
+    position: relative; width: 50%; height: 100%;
+    .box{
+      position: absolute; top: 50%; margin-top: -19vw; left: 50%; margin-left: 22.5vw; width: 25vw; height: 38vw; background: no-repeat 50% / cover;
+      h3{padding-top: 2vw; padding-left: 1vw; font-size: 1.5vw;}
+      p{padding-top: 1vw; padding-left: 1.2vw; font-size: 0.9vw; line-height: 1.3;}
+      &.box1{background-image: url("../images/main/cnt5_photo1.jpg");margin-left: -12.5vw;}
+      &.box2{
+        @include transform(rotate(7deg));
+        background-image: url("../images/main/cnt5_photo2.jpg");
+      }
+      &.box3{
+        @include transform(rotate(-7deg));
+        background-image: url("../images/main/cnt5_photo3.jpg");}
+      &.box4{
+        @include transform(rotate(5deg));
+        background-image: url("../images/main/cnt5_photo4.jpg");
+      }  
+    }
+    .controller{
+      @include flex;
+      @include justify-content(space-between);
+      @include align-items;
+      background: no-repeat 50% / cover; width: 100%; height: 70px; z-index: 10;
+      .button-prev{background-image: url("../images/icon/slide_left_small.png");  width: 72px; height: 70px; position: absolute; bottom: 5vw; left: 0;}
+      .button-next{background-image: url("../images/icon/slide_right_small.png"); width: 72px; height: 70px; position: absolute; bottom: 5vw; right: 0;}
+    }
+  }
+}

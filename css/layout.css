@@ -1,0 +1,198 @@
+#pcHeader {
+  position: fixed;
+  width: 100%;
+  height: 100px;
+  z-index: 900; }
+  #pcHeader ::before {
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s; }
+  #pcHeader.active::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 500px;
+    background: #ffe2e2;
+    z-index: -1;
+    border-radius: 0 0 30% 30%; }
+  #pcHeader.on .headerTop {
+    position: relative;
+    margin: 30px 0 10px;
+    width: 100%;
+    height: 70px; }
+    #pcHeader.on .headerTop .logo a {
+      -webkit-transform: translateX(-50%);
+      -moz-transform: translateX(-50%);
+      transform: translateX(-50%);
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 70px;
+      height: 65px;
+      background: url("../images/common/logo_small.png"); }
+    #pcHeader.on .headerTop .util {
+      position: absolute;
+      right: 3%;
+      line-height: 70px; }
+      #pcHeader.on .headerTop .util button {
+        margin-left: 20px; }
+  #pcHeader .headerTop {
+    position: absolute;
+    margin: 30px 0 10px;
+    width: 100%;
+    height: 70px; }
+    #pcHeader .headerTop .logo a {
+      -webkit-transform: translateX(-50%);
+      -moz-transform: translateX(-50%);
+      transform: translateX(-50%);
+      position: absolute;
+      top: 0;
+      left: 5vw;
+      width: 50px;
+      height: 46px;
+      background: url("../images/common/logo_50.png") no-repeat;
+      z-index: 10; }
+    #pcHeader .headerTop .util {
+      position: absolute;
+      right: 3%; }
+      #pcHeader .headerTop .util button {
+        margin-left: 20px; }
+  #pcHeader #gnb > ul {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    font-family: ComicNeue;
+    font-size: 24px;
+    margin-top: 15px; }
+    #pcHeader #gnb > ul::after {
+      -webkit-transform: translateX(-50%);
+      -moz-transform: translateX(-50%);
+      transform: translateX(-50%);
+      -webkit-transition: width 0.5s;
+      transition: width 0.5s;
+      position: absolute;
+      content: "";
+      top: 60px;
+      left: 50%;
+      width: 900px;
+      height: 1px;
+      background: #373737;
+      opacity: 0; }
+    #pcHeader #gnb > ul > li {
+      text-align: center; }
+      #pcHeader #gnb > ul > li:hover, #pcHeader #gnb > ul > li:focus, #pcHeader #gnb > ul > li.on {
+        border-radius: 44px;
+        background: #FFF1F1; }
+      #pcHeader #gnb > ul > li:hover a::after, #pcHeader #gnb > ul > li:focus a::after, #pcHeader #gnb > ul > li.on a::after {
+        opacity: 1; }
+      #pcHeader #gnb > ul > li > a {
+        position: relative;
+        display: block;
+        padding: 0 50px;
+        height: 60px;
+        line-height: 60px; }
+        #pcHeader #gnb > ul > li > a::after {
+          -webkit-transition: opacity 0.5s;
+          transition: opacity 0.5s;
+          position: absolute;
+          content: "";
+          top: 30%;
+          right: 15%;
+          border-radius: 50%;
+          background: #e23e3d;
+          width: 7px;
+          height: 7px;
+          opacity: 0; }
+      #pcHeader #gnb > ul > li ul {
+        padding: 10px 0 30px; }
+        #pcHeader #gnb > ul > li ul li {
+          padding: 10px 0;
+          position: relative; }
+          #pcHeader #gnb > ul > li ul li a {
+            font-family: Spoqa;
+            font-size: 16px; }
+
+#gnbLine {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  margin-left: -40px;
+  pointer-events: none; }
+  #gnbLine #line1 {
+    fill: none;
+    stroke: #e23e3d;
+    stroke-linecap: round;
+    stroke-width: 3;
+    stroke-dasharray: 175;
+    stroke-dashoffset: 175;
+    animation: lineGnb 0.5s linear forwards; }
+
+@keyframes lineGnb {
+  0% {
+    stroke-dashoffset: 175; }
+  100% {
+    stroke-dashoffset: 0; } }
+.footer {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+  background: url("../images/common/footer_bg.png") no-repeat top center/cover;
+  height: 80vh;
+  font-size: 0.8333vw;
+  padding-right: 5vw; }
+  .footer .logo {
+    padding-right: 1vw; }
+  .footer .foot_left strong {
+    font-family: ComicNeue;
+    font-size: 1.5vw; }
+  .footer .foot_left address p {
+    padding-top: 1vw; }
+  .footer .foot_left span {
+    padding-right: 1vw; }
+  .footer .foot_center {
+    padding: 0 5vw; }
+    .footer .foot_center p {
+      padding-top: 1vw; }
+    .footer .foot_center .copy {
+      font-size: 0.729vw;
+      color: #676767; }
+    .footer .foot_center span {
+      padding-right: 1vw; }
+  .footer .foot_right p {
+    font-weight: 700;
+    padding-bottom: 0.5vw; }
+  .footer .foot_right .sns {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    padding-bottom: 1.5vw; }
+    .footer .foot_right .sns li {
+      width: 1.7vw;
+      height: 1.7vw;
+      margin-right: 1vw; }
+  .footer .foot_right .help {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    padding-bottom: 1.5vw; }
+    .footer .foot_right .help li {
+      margin-right: 1vw; }
+
+/*# sourceMappingURL=layout.css.map */
